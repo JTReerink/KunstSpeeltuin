@@ -56,7 +56,7 @@ void firstAttempt (uint32_t color, int wait) {
 
 void fadeIn (uint32_t r,uint32_t g,uint32_t b, int wait) {
    for(int i=0; i<strip.numPixels(); i++) { // For each pixel in strip...
-      for(int j=0; j < 100; j += 10) { //For each
+      for(int j=0; j < 100; j += 10) { //Fade in with 10%
         strip.setPixelColor(i, strip.Color((r/100*j),(g/100*j),(b/100*j)));
         strip.show();
         delay(wait);
