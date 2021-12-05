@@ -6,6 +6,7 @@
 // Which pin on the Arduino is connected to the NeoPixels?
 // On a Trinket or Gemma we suggest changing this to 1:
 #define LED_PIN    D1
+#define SENSOR_PIN D2
 
 // How many NeoPixels are attached to the Arduino?
 #define LED_COUNT 3
@@ -22,6 +23,9 @@ Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);
 //   NEO_RGBW    Pixels are wired for RGBW bitstream (NeoPixel RGBW products)
 
 
+bool oldState = LOW;
+
+
 // setup() function -- runs once at startup --------------------------------
 void setup() {
   // These lines are specifically to support the Adafruit Trinket 5V 16 MHz.
@@ -31,6 +35,8 @@ void setup() {
 #endif
   // END of Trinket-specific code.
 
+  pinMode(SENSOR_PIN, INPUT_PULLUP);
+
   strip.begin();           // INITIALIZE NeoPixel strip object (REQUIRED)
   strip.show();            // Turn OFF all pixels ASAP
   strip.setBrightness(50); // Set BRIGHTNESS to about 1/5 (max = 255)
@@ -38,12 +44,25 @@ void setup() {
 }
 
 void loop(){
+  bool newState = digitalRead(SENSOR_PIN);
+  
+    if(newState == HIGH && oldState == LOW) {
+      fadeInAll(255,215,0, 100);
+    }
+    if(newState == LOW && oldState == LOW) {
+      delay(20);
+      fadeOutAll(255,215,0, 100);
+    }
+  
+  oldState = newState;
+
+  
 //  firstAttempt(strip.Color(255, 0, 0), 400);
 //  firstAttempt(strip.Color(0, 255, 0), 400);
 //  firstAttempt(strip.Color(0, 0, 255), 400);
-  fadeIn(255, 0, 0, 100);
-  fadeIn(0, 255, 0, 100);
-  fadeIn(0, 0, 255, 100);
+//  fadeIn(255, 0, 0, 100);
+//  fadeIn(0, 255, 0, 100);
+//  fadeIn(0, 0, 255, 100);
 }
 
 void firstAttempt (uint32_t color, int wait) {
@@ -56,10 +75,39 @@ void firstAttempt (uint32_t color, int wait) {
 
 void fadeIn (uint32_t r,uint32_t g,uint32_t b, int wait) {
    for(int i=0; i<strip.numPixels(); i++) { // For each pixel in strip...
-      for(int j=0; j < 100; j += 10) { //Fade in with 10%
+      for(int j=0; j < 101; j += 10) { //Fade in with 10%
         strip.setPixelColor(i, strip.Color((r/100*j),(g/100*j),(b/100*j)));
         strip.show();
         delay(wait);
       }
+    } 
+}
+
+void fadeOut (uint32_t r,uint32_t g,uint32_t b, int wait) {
+   for(int i=0; i<strip.numPixels(); i++) { // For each pixel in strip...
+      for(int j=100; j > -1; j -= 10) { //Fade in with 10%
+        strip.setPixelColor(i, strip.Color((r/100*j),(g/100*j),(b/100*j)));
+      }
+    } 
+    strip.show();
+}
+
+void fadeInAll (uint32_t r,uint32_t g,uint32_t b, int wait) {
+    for(int j=0; j < 101; j += 10) { //Fade in with 10%
+      for(int i=0; i<strip.numPixels(); i++) { // For each pixel in strip...
+        strip.setPixelColor(i, strip.Color((r/100*j),(g/100*j),(b/100*j)));        
+      }
+      strip.show();
+      delay(wait);
+    } 
+}
+
+void fadeInAll (uint32_t r,uint32_t g,uint32_t b, int wait) {
+    for(int j=100; j > -1; j -= 10) { //Fade in with 10%
+      for(int i=0; i<strip.numPixels(); i++) { // For each pixel in strip...
+        strip.setPixelColor(i, strip.Color((r/100*j),(g/100*j),(b/100*j)));        
+      }
+      strip.show();
+      delay(wait);
     } 
 }
