@@ -28,7 +28,7 @@ void amaze (byte i, int r,int g,int b, int wait){
   }
 }
 
-void firstAttempt (uint32_t color, int wait) {
+void walkIn (uint32_t color, int wait) {
   for(int i=0; i<strip.numPixels(); i++) { // For each pixel in strip...
     strip.setPixelColor(i, color);         //  Set pixel's color (in RAM)
     strip.show();                          //  Update strip to match
@@ -66,3 +66,11 @@ void fadeInAll (int r,int g,int b, int wait) {
 }
 
 void fadeOutAll (int r,int g,int b, int wait) {
+    for(int j=100; j > -1; j -= 10) { //Fade out with 10%
+      for(int i=0; i<strip.numPixels(); i++) { // For each pixel in strip...
+        strip.setPixelColor(i, strip.Color((r/100.00*j),(g/100.00*j),(b/100.00*j)));        
+      }
+      strip.show();
+      delay(wait);
+    } 
+}
