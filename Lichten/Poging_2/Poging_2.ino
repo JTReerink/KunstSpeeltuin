@@ -30,6 +30,7 @@ bool oldState = LOW;
 uint32_t blue = (0, 0, 255);
 uint32_t green = (0, 255, 0);
 
+
 // setup() function -- runs once at startup --------------------------------
 void setup() {
   // These lines are specifically to support the Adafruit Trinket 5V 16 MHz.
