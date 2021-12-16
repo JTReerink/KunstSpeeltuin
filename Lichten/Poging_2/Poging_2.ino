@@ -28,7 +28,7 @@ Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);
 
 bool oldState = LOW;
 uint32_t blue = (0, 0, 255);
-uint32_t green = (255, 0, 0);
+uint32_t green = (0, 255, 0);
 
 // setup() function -- runs once at startup --------------------------------
 void setup() {
@@ -97,30 +97,30 @@ void checkButton(){
    // delay(5000);
     fadeWalk(10, 15, 200, 0, 221, 150); // bloem 1
 
-    walkBack(6, 9, 0, 0, 0, 300);
+    walkBack(6, 9, 0, 0, 0, 300); // steeltje bloem 1 uit
   }
   
   
   bool buttonDown2 = digitalRead(BUTTON_TWO);
 
   if(buttonDown2 == HIGH) {
-    strip.setPixelColor(12, strip.Color(255, 0, 221));         //  Set pixel's color (in RAM)
+    strip.setPixelColor(12, strip.Color(255, 0, 221));         
+    
+    strip.setPixelColor(13, strip.Color(255,190,0));         
+    
+    strip.setPixelColor(14, strip.Color(50,0,255));
 
-    strip.setPixelColor(13, strip.Color(255,190,0));         //  Set pixel's color (in RAM)
+    strip.setPixelColor(15, strip.Color(0, 255, 230));
 
-    strip.setPixelColor(14, strip.Color(50,0,255));         //  Set pixel's color (in RAM)
+    strip.setPixelColor(16, strip.Color(255,200,221));
+    
+    strip.setPixelColor(17, strip.Color(254,218,95));
 
-    strip.setPixelColor(15, strip.Color(0, 255, 230));         //  Set pixel's color (in RAM)
+    strip.setPixelColor(18, strip.Color(159,160,253));
 
-    strip.setPixelColor(16, strip.Color(255,200,221));         //  Set pixel's color (in RAM)
+    strip.setPixelColor(19, strip.Color(72,202,228));
 
-    strip.setPixelColor(17, strip.Color(254,218,95));         //  Set pixel's color (in RAM)
-
-    strip.setPixelColor(18, strip.Color(159,160,253));         //  Set pixel's color (in RAM)
-
-    strip.setPixelColor(19, strip.Color(72,202,228));         //  Set pixel's color (in RAM)
-
-    strip.setPixelColor(22, strip.Color(75,0,255));         //  Set pixel's color (in RAM)
+    strip.setPixelColor(22, strip.Color(75,0,255));
     strip.show();
   }
 }
@@ -177,12 +177,12 @@ void fadeOutAll (int eersteLED,int laatsteLED, int r,int g,int b, int wait) {
 void fadeWalk (int eersteLED,int laatsteLED, int r,int g,int b, int wait) {
   for(int i=eersteLED; i<laatsteLED+11; i++) { // For each pixel in strip...
     if(i < laatsteLED+1){
-      strip.setPixelColor(i, strip.Color((r/100*10),(g/100*10),(b/100*10)));
+      strip.setPixelColor(i, strip.Color((r/100.00*10),(g/100.00*10),(b/100.00*10)));
     }
     int p = 20;
     for(int j = i-1; j > eersteLED-1; j--){
       if( j < laatsteLED+1){
-        strip.setPixelColor(j, strip.Color((r/100*p),(g/100*p),(b/100*p))); 
+        strip.setPixelColor(j, strip.Color((r/100.00*p),(g/100.00*p),(b/100.00*p))); 
       } 
       if(p<101){
         p += 10;
