@@ -1,2 +1,1 @@
-./Logboek/Logboek_Technische-progressie.gsheet
-./Logboek/Logboek_Werkwijze.gsheet
+*.gsheet
