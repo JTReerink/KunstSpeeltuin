@@ -1,0 +1,47 @@
+*{
+    background-color: black;
+    margin: auto;
+}
+
+.countHolder {
+    overflow: hidden;
+    position: absolute;
+    border-style: solid white;
+    bottom: 10%;
+    width: 100px;
+    height: 45px;
+    margin: 0 50%;
+}
+
+.countHolder img{
+    position: relative;
+    float: left;
+
+}
+
+.countHolder #eenHeid {
+    bottom: 0;
+    margin-top: 5px;
+    transition: transform 5s ease-in-out;
+}
+
+.countHolder #tienTal {
+    bottom: 0;
+    transition: transform 5s ease-in-out;
+}
+
+.countHolder #eenHeid-active {
+    bottom: 675px;
+}
+
+
+
+/* @keyframes scrollEen {
+    from    {bottom:0px;}
+    to      {bottom: 675px;}
+}
+
+@keyframes scrollTien {
+    from    {bottom:0px;}
+    to      {bottom: 325px;}
+} */
