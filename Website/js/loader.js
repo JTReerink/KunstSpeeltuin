@@ -12,5 +12,5 @@ button.addEventListener("click", function() {
 
 tienTal.addEventListener('transitionend', () => {
     console.log("next page");
-    window.location.href = 'home.html';
+    window.location.href = './home';
 })
