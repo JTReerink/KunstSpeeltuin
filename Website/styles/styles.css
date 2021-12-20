@@ -1,13 +1,52 @@
 * {
-    background-color: black;
     font-family: "Times New Roman", Times, serif;
 }
 
+body {
+    background-color: black;
+}
+
 #navbar {
-    background-color: white;
-    padding: 10px 10px 30px 0px;
+    padding: 5px 10px 10px 0px;
+    overflow: hidden;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+
 }
 
 #logo {
-    
+    background-color: black;
+    float: left;
+    text-align: center;
+    padding: 15px 15px;
+}
+
+#navbar-mid {
+    position: relative;
+    text-align: center;
+    top: 15px;
+}
+
+#navbar-mid a {
+    padding: 8px 15px;
+}
+
+#tickets {
+    position: relative;
+    float: right;
+    padding: 10px 10px;
+    bottom: 15px;
+    border: solid rgb(159,160,253);
+}
+
+#flowers {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    margin-top: 4%;    
 }
