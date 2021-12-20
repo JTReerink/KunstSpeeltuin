@@ -1,13 +1,18 @@
 * {
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Times New Roman", serif;
 }
 
 body {
     background-color: black;
 }
 
+p, button {
+    font-size: 20px;
+}
+
 #navbar {
-    padding: 5px 10px 10px 0px;
+    padding: 5px 10px ;
+    position: relative;
     overflow: hidden;
 }
 
@@ -18,7 +23,7 @@ body {
 
 }
 
-#logo {
+#navbar #logo {
     background-color: black;
     float: left;
     text-align: center;
@@ -26,9 +31,13 @@ body {
 }
 
 #navbar-mid {
-    position: relative;
+    position: absolute;
     text-align: center;
-    top: 15px;
+    top: 50%;
+    left: 50%;
+    float: none;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
 }
 
 #navbar-mid a {
@@ -36,17 +45,29 @@ body {
 }
 
 #tickets {
-    position: relative;
     float: right;
-    padding: 10px 10px;
-    bottom: 15px;
-    border: solid rgb(159,160,253);
+    padding: 10px 45px;
+    border: solid 1px rgb(159,160,253);
 }
 
-#flowers {
-    display: block;
+#middle #flowers {
+    display: flex;
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
-    margin-top: 4%;    
+    width: 30%;
+    margin-top: 10%;
+}
+
+#middle #planVisit {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgba(175, 175, 175, 0.329);
+    backdrop-filter: blur(10px);
+    color: white;
+    font-size: 16px;
+    padding: 10px 45px;
+    cursor: pointer;
+    border: solid 0.5px white;
 }
