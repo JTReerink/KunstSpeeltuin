@@ -6,12 +6,19 @@ body {
     background-color: black;
 }
 
+h1 {
+    font-size: 8vw;
+    color: white;
+}
+
 p, button {
     font-size: 20px;
 }
 
+/* begin van nav-bar */
+
 #navbar {
-    padding: 5px 10px ;
+    padding: 5px 10px;
     position: relative;
     overflow: hidden;
 }
@@ -45,21 +52,41 @@ p, button {
 }
 
 #tickets {
+    margin-right: 5%;
     float: right;
     padding: 10px 45px;
     border: solid 1px rgb(159,160,253);
 }
 
+/* eind van nav-bar */
+/* begin van middle part */
+
+#middle #thigmo {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    margin: -2% 0 0 15%;
+    background: linear-gradient(to right, white 7%, 90%, rgba(255, 255, 255, 0.322));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* Bloemen */
 #middle #flowers {
+    position: relative;
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
-    margin-top: 10%;
+    width: 35%;
+    margin-top: 8%;
+    z-index: 2;
 }
 
+/* 'plan visit' Button */
 #middle #planVisit {
-    position: absolute;
+    position: relative;
+    z-index: 3;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
