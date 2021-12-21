@@ -7,7 +7,7 @@ body {
 }
 
 h1 {
-    font-size: 8vw;
+    font-size: 8.5vw;
     color: white;
 }
 
@@ -65,8 +65,8 @@ p, button {
     position: absolute;
     z-index: 1;
     display: flex;
-    margin: -2% 0 0 15%;
-    background: linear-gradient(to right, white 7%, 90%, rgba(255, 255, 255, 0.322));
+    margin: -1.5% 0 0 13.7%;
+    background: linear-gradient(to right, white 70%, 97%, rgba(255, 255, 255, 0.322));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -77,8 +77,9 @@ p, button {
 #middle #flowers {
     position: relative;
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
     width: 35%;
     margin-top: 8%;
     z-index: 2;
