@@ -51,12 +51,13 @@ p {
 .countHolder #eenHeid {
     bottom: 0;
     /* margin-top: 1px; */
-    transition: transform 4s ease-in-out;
+    transition: transform 4s cubic-bezier(0.6, 0, 0.4, 1);
 }
+
 
 .countHolder #tienTal {
     bottom: 9px;
-    transition: transform 4s ease-in-out;
+    transition: transform 4s cubic-bezier(0.6, 0, 0.4, 1);
 }
 
 #procent {
