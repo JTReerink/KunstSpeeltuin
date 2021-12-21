@@ -9,18 +9,54 @@ body {
 
 p {
     color: white;
+}
+
+#center {
+    position: absolute;
+    text-align: center;
+    height: 40%;
+    width: 100%;
+    bottom: 5%;
+}
+
+/* De bloem */
+#load {
+    position: relative;
+    width: 10em;
+    cursor: pointer;
+}
+
+.countHolder {
+    overflow: hidden;
+    position: relative;
+    border-style: solid white;
+    width: 150px;
+    height: 65px;
+    margin-top: 2%;
+}
+
+.countHolder p {
     position: absolute;
     bottom: 10%;
     margin: 0 50%;
 }
 
-#load {
-    background-color: white;
-    position: absolute;
-    bottom: 30%;
-    width: 100px;
-    height: 60px;
-    margin: 0 47%;
+.countHolder img{
+    position: relative;
+    float: left;
+    width: 45px;
+    
+}
+
+.countHolder #eenHeid {
+    bottom: 0;
+    /* margin-top: 1px; */
+    transition: transform 4s ease-in-out;
+}
+
+.countHolder #tienTal {
+    bottom: 9px;
+    transition: transform 4s ease-in-out;
 }
 
 #procent {
@@ -29,43 +65,11 @@ p {
     font-size: 50px;
 }
 
+/* Het woord "loading" */
 #loading {
     visibility: hidden;
+    margin-bottom: 0px;
 }
-
-.countHolder {
-    overflow: hidden;
-    position: absolute;
-    border-style: solid white;
-    bottom: 15%;
-    width: 150px;
-    height: 65px;
-    margin: 0 46%;
-}
-
-.countHolder img{
-    position: relative;
-    float: left;
-    width: 45px;
-
-}
-
-.countHolder #eenHeid {
-    bottom: 0;
-    /* margin-top: 1px; */
-    transition: transform 5s ease-in-out;
-}
-
-.countHolder #tienTal {
-    bottom: 9px;
-    transition: transform 5s ease-in-out;
-}
-
-.countHolder #eenHeid-active {
-    bottom: 675px;
-}
-
-
 
 /* @keyframes scrollEen {
     from    {bottom:0px;}

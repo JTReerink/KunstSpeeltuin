@@ -1,9 +1,10 @@
-const button = document.getElementById("load");
+const click = document.getElementById("load");
+// const button = document.getElementById("load");
 const loading = document.getElementById("loading");
 const tienTal = document.getElementById("tienTal");
 const eenHeid = document.getElementById("eenHeid");
 
-button.addEventListener("click", function() {
+click.addEventListener("click", function() {
     console.log("click");
     loading.style.visibility = "visible";
     tienTal.style.transform = "translateY(-575px)";

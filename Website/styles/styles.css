@@ -34,7 +34,7 @@ p, button {
     background-color: black;
     float: left;
     text-align: center;
-    padding: 15px 15px;
+    width: 5%;
 }
 
 #navbar-mid {
@@ -67,6 +67,7 @@ p, button {
     display: flex;
     margin: -2% 0 0 15%;
     background: linear-gradient(to right, white 7%, 90%, rgba(255, 255, 255, 0.322));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
