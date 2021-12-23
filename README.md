@@ -1,10 +1,17 @@
 # KunstSpeeltuin
 
-Dit is mijn repo voor alles m.b.t. de opdracht Radicale KunstSpeeltuin van het M.A.
-De **logboeken** worden niet in de git meegenomen, deze zijn online te vinden via de links hier onder.
+## Het concept
+
+Voor het project Radicale Kunstspeeltuin van het MediaCollege moetsen we samenwerken in groepjes met 3 RuimtelijkVormgevers, 2 MediaVormgevers en 1 SoftwareDeveloper (ik).
+<br>
+Het idee was om 5 bloemen te maken. 1 in het midden, 4 in de hoeken van de ruimte. Alle bloemen kregen 6 ledlampjes in de bloem en 3 of 4 (afhangend van de lengte) ledjes in de steel. De bloem in het midden zou 4 drukplekken krijgen in het midden van de bloem, die dan een lichtpatroon activeerde. Ook zaten er in de buitenste bloemen een bewegingsensor. Wanneer deze beweging registreerde activeerde deze een lichtplan van ledjes van die huidige bloem die dan zachtjes gingen branden. Dit om het gevoel te creeëren alsof de bloem de bezoeker aanvoelde.
+
+_Visualtisatie gemaakt door de RV-studenten_<br>
+<img src="https://user-images.githubusercontent.com/80821099/147220471-6a4077af-e278-46f4-b01b-83fbb61e387a.png" width="700"><br>
 
 
-[Logboek Werkwijze](https://docs.google.com/spreadsheets/d/1Q4qILZ0Bl56O2A2_YKM4ofYVsEkzzLspotR28CTKoQc/edit?usp=sharing)
-[Logboek Technische progressie](https://docs.google.com/spreadsheets/d/1YVb_C5TsbWpyhvSk7ew6KAUmTUdejODWfEtyPysFfY8/edit?usp=sharing)
 
-[Trello](https://trello.com/b/AEZ9vci9/friendlyelf)
+## Links
+* <a href='https://docs.google.com/spreadsheets/d/1Q4qILZ0Bl56O2A2_YKM4ofYVsEkzzLspotR28CTKoQc/edit?usp=sharing' target='_blank'>Logboek Werkwijze</a>
+* [Logboek Technische progressie](https://docs.google.com/spreadsheets/d/1YVb_C5TsbWpyhvSk7ew6KAUmTUdejODWfEtyPysFfY8/edit?usp=sharing)
+* [Trello (FrienlyElf)](https://trello.com/b/AEZ9vci9/friendlyelf)
