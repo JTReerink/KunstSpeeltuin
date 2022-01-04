@@ -14,7 +14,7 @@ p {
 #center {
     position: absolute;
     text-align: center;
-    height: 40%;
+    height: 50%;
     width: 100%;
     bottom: 5%;
 }
@@ -32,7 +32,7 @@ p {
     border-style: solid white;
     width: 150px;
     height: 65px;
-    margin-top: 2%;
+    margin-top: 5%;
 }
 
 .countHolder p {
@@ -71,6 +71,16 @@ p {
     visibility: hidden;
     margin-bottom: 0px;
 }
+
+/* De Cirkel */
+#circle {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: -3.5em;
+    margin-left: -1.3em;
+}
+
 
 /* @keyframes scrollEen {
     from    {bottom:0px;}
