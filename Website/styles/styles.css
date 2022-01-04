@@ -49,13 +49,40 @@ p, button {
 
 #navbar-mid a {
     padding: 8px 15px;
+    text-decoration: underline rgba(255,255,255,0);
+    transition: text-decoration-color .5s, color .5s;
+}
+
+#navbar-mid a:hover {
+    text-decoration-color: rgba(254,218,95,1);
+    color: rgb(254,218,95);
 }
 
 #tickets {
+    position: relative;
+    background-image: none;
     margin-right: 5%;
     float: right;
     padding: 10px 45px;
     border: solid 1px rgb(159,160,253);
+    z-index: 1;
+}
+
+#tickets::before {
+    position: absolute;
+    content: "";
+    top: -1px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right ,rgb(159,160,253), rgba(137, 208, 255, 0.863));
+    z-index: -1;
+    transition: opacity 0.3s linear;
+    opacity: 0;
+}
+
+#tickets:hover::before {
+    opacity: 1;
 }
 
 /* eind van nav-bar */
@@ -99,4 +126,9 @@ p, button {
     padding: 10px 45px;
     cursor: pointer;
     border: solid 0.5px white;
+    transition: padding .5s;
+}
+
+#middle #planVisit:hover {
+    padding: 12px 50px;
 }
