@@ -1,10 +1,11 @@
 *{
-    background-color: black;
+    
     margin: auto;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
+    background-color: black;
 }
 
 p {
@@ -75,6 +76,7 @@ p {
 /* De Cirkel */
 #circle {
     position: absolute;
+    /* background: white; */
     height: 200px;
     width: 200px;
     top: -3.5em;
