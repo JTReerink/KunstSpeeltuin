@@ -11,10 +11,10 @@ click.addEventListener("click", function() {
     draw();
 },false);
 
-// tienTal.addEventListener('transitionend', () => {
-//     console.log("next page");
-//     window.location.href = './home';
-// });
+tienTal.addEventListener('transitionend', () => {
+    console.log("next page");
+    window.location.href = './home';
+});
 
 
 let j = 1.00;
