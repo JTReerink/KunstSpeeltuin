@@ -1,5 +1,5 @@
 * {
-    font-family: "Times New Roman", serif;
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
 }
 
 html, body {
@@ -43,8 +43,21 @@ h1 {
     color: white;
 }
 
-p, button {
-    font-size: 20px;
+h3 {
+    font-size: 2.7vw;
+    color: white;
+    font-weight: 100;
+}
+
+p {
+    font-size: 1.2vw;
+    color: white;
+}
+
+sup {
+    position: relative;
+    font-size: 50%;
+    top: .3em;
 }
 
 
@@ -135,13 +148,33 @@ p, button {
     -webkit-text-fill-color: transparent;
 }
 
+#middle #showDate {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    margin: .8% 0 0 -0.5%;
+    z-index: 3;
+}
+
 #middle #garden {
     position: absolute;
     z-index: 1;
     display: flex;
     right: 10%;
     margin: -21.3% 1.5% 0 0;
-    color: white;
+}
+
+#middle #mainSubtext {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    right: 10%;
+    margin: -11% 1.5% 0 0;
+    text-align: end;
+    font-weight: lighter;
 }
 
 /* bloemen */
@@ -166,7 +199,7 @@ p, button {
     background-color: rgba(175, 175, 175, 0.329);
     backdrop-filter: blur(10px);
     color: white;
-    font-size: 16px;
+    font-size: 1vw;
     padding: 10px 45px;
     cursor: pointer;
     border: solid 0.5px white;
