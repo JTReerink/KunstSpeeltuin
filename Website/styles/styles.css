@@ -4,14 +4,15 @@
 
 html, body {
     height: 100%;
-  }
-
-#page1, #page2, #page3 {
-    background-color: black;
 }
 
+  
 /* BACKGROUNDS */
 
+#page1, #page2, #page3 {
+      background-color: black;
+}
+  
 #page1 {
     position: absolute;
     left: 0;
@@ -46,7 +47,8 @@ p, button {
     font-size: 20px;
 }
 
-/* begin van nav-bar */
+
+/* NAV-BAR */
 
 #navbar {
     padding: 5px 10px;
@@ -115,12 +117,12 @@ p, button {
     opacity: 1;
 }
 
-/* eind van nav-bar */
+/* END NAV-BAR */
 
 
 
 
-/* begin van middle part */
+/* PAGE1 INHOUD */
 
 #middle #thigmo {
     position: absolute;
@@ -133,8 +135,16 @@ p, button {
     -webkit-text-fill-color: transparent;
 }
 
+#middle #garden {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    right: 10%;
+    margin: -21.3% 1.5% 0 0;
+    color: white;
+}
 
-/* Bloemen */
+/* bloemen */
 #middle #flowers {
     position: relative;
     display: flex;
@@ -146,7 +156,7 @@ p, button {
     z-index: 2;
 }
 
-/* 'plan visit' Button */
+/* 'plan visit' button */
 #middle #planVisit {
     position: relative;
     z-index: 3;
