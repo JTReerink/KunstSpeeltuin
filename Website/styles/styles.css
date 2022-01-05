@@ -4,6 +4,7 @@
 
 html, body {
     height: 100%;
+    scroll-behavior: smooth;
 }
 
   
@@ -27,6 +28,7 @@ html, body {
     width: 100%;
     left: 0;
     top: 100%;
+    background-color: rgb(26, 26, 26);
 }
 
 #page3 {
@@ -35,6 +37,8 @@ html, body {
     width: 100%;
     left: 0;
     top: 200%;
+    background-color: rgb(63, 63, 63);
+
 }
 
 
