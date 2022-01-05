@@ -2,9 +2,40 @@
     font-family: "Times New Roman", serif;
 }
 
-body {
+html, body {
+    height: 100%;
+  }
+
+#page1, #page2, #page3 {
     background-color: black;
 }
+
+/* BACKGROUNDS */
+
+#page1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#page2 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 100%;
+}
+
+#page3 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 200%;
+}
+
 
 h1 {
     font-size: 8.5vw;
@@ -31,7 +62,6 @@ p, button {
 }
 
 #navbar #logo {
-    background-color: black;
     float: left;
     text-align: center;
     width: 5%;
@@ -86,6 +116,10 @@ p, button {
 }
 
 /* eind van nav-bar */
+
+
+
+
 /* begin van middle part */
 
 #middle #thigmo {
