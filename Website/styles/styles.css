@@ -66,11 +66,21 @@ sup {
 
 
 /* NAV-BAR */
+#logo {
+    position: fixed;
+    left: 15px;
+    top: 20px;
+    text-align: center;
+    width: 5%;
+    z-index: 4;
+}
 
 #navbar {
-    padding: 5px 10px;
-    position: relative;
+    padding: 15px 10px;
+    position: fixed;
     overflow: hidden;
+    width: 100%;
+    z-index: 4;
 }
 
 #navbar a {
@@ -80,10 +90,8 @@ sup {
 
 }
 
-#navbar #logo {
-    float: left;
-    text-align: center;
-    width: 5%;
+#nav-logo {
+    display: none;
 }
 
 #navbar-mid {
@@ -134,12 +142,24 @@ sup {
     opacity: 1;
 }
 
+.closebtn {
+  display: none;
+}
+
+.sidenav-button {
+  display: none;
+}
+
 /* END NAV-BAR */
 
 
 
 
 /* PAGE1 INHOUD */
+
+#middle {
+    margin-top: 12%;
+}
 
 #middle #thigmo {
     position: absolute;
@@ -186,8 +206,6 @@ sup {
     position: relative;
     display: flex;
     margin: auto;
-    /* margin-left: auto;
-    margin-right: auto; */
     width: 35%;
     margin-top: 8%;
     z-index: 2;

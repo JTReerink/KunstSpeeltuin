@@ -1,11 +1,9 @@
-// window.onscroll = function() {scrollFunction()};
+function openNav() {
+    document.getElementById("navbar").style.display = "block";
+}
 
-// function scrollFunction() {
-//   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-//     document.getElementById("navbar").style.padding = "30px 10px";
-//     document.getElementById("logo").style.fontSize = "25px";
-//   } else {
-//     document.getElementById("navbar").style.padding = "50px 10px";
-//     document.getElementById("logo").style.fontSize = "35px";
-//   }
-// }
+function closeNav() {
+    if(screen.width < 900) {
+        document.getElementById("navbar").style.display = "none";
+    }
+}

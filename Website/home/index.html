@@ -4,26 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="../styles/styles.css">
+    <link rel="stylesheet" media="screen and (max-width: 899px)" href="../styles/mobileStyles.css">
     <title>Thigmo Garden</title>
 </head>
 <body>
         
     <div id="page1">
+        <div id="logo">
+            <a href="./"><img src="../media/Logo_Gradient_MetBloem.svg" alt="LOGO"></a>
+        </div> 
 
         <nav id="navbar">
-            <div id="logo">
-                <a href="./"><img src="../media/Logo_Gradient_MetBloem.svg" alt="LOGO"></a>
-            </div> 
-            <div id="navbar-mid">
-                <a href="./">Home</a>
-                <a href="../about">About</a>
-                <a href="../contact">Contact</a>
-            </div>
-            <div id="tickets" onclick="location.href='#page3'">
-                <a href="#page3">Plan a visit</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                <div class="inset-text">&times;</div>
+            </a>
+            <div id="navbar-content">
+                <div id="nav-logo">
+                    <a href="./"><img src="../media/Logo_Gradient_MetBloem.svg" alt="LOGO"></a>
+                </div> 
+                <div id="navbar-mid">
+                    <a href="./">Home</a>
+                    <a href="../about">About</a>
+                    <a href="../contact">Contact</a>
+                </div>
+                <div id="tickets" onclick="location.href='#page3'">
+                    <a href="#page3" onclick="closeNav()">Plan a visit</a>
+                </div>
             </div>
         </nav>
+        <button class="sidenav-button" id="sidenav-button" onclick="openNav()">&#9776;</button>
 
         <div id="middle">
             <h1 id="thigmo">Thigmo</h1>
