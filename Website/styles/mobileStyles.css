@@ -127,10 +127,15 @@ sup {
 
 /* MIDDLE PART */
 
+#middle {
+    margin-top: 30%;
+}
+
 #middle #thigmo {
     position: absolute;
     z-index: 1;
-    top: 26%;
+    width: 50%;
+    margin: 10% 0;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -139,7 +144,7 @@ sup {
 #middle #flowers {
     position: absolute;
     width: 70%;
-    top: 45%;
+    margin: 42% 0;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -149,7 +154,7 @@ sup {
 #middle #garden {
     position: absolute;
     z-index: 1;
-    top: 53%;
+    margin: 71% 0;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -162,7 +167,7 @@ sup {
 #middle #showDate {
     position: absolute;
     text-align: center;
-    top: 60%;
+    margin: 82% 0;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -191,8 +196,9 @@ sup {
     background-color: rgba(175, 175, 175, 0.329);
     backdrop-filter: blur(10px);
     color: white;
-    font-size: 5vw;
+    font-size: 4vw;
     padding: 15px 50px;
+    width: 50%;
     cursor: pointer;
     border: solid 0.5px white;
     transition: padding .5s;
