@@ -134,7 +134,6 @@ sup {
 #middle #thigmo {
     position: absolute;
     z-index: 1;
-    width: 50%;
     margin: 10% 0;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -154,7 +153,7 @@ sup {
 #middle #garden {
     position: absolute;
     z-index: 1;
-    margin: 71% 0;
+    margin: 72% 0;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
