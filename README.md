@@ -10,7 +10,7 @@ Het idee was om 5 bloemen te maken. 1 in het midden, 4 in de hoeken van de ruimt
 
 _Visualtisatie gemaakt door de RV-studenten_<br>
 <img src="https://user-images.githubusercontent.com/80821099/147220471-6a4077af-e278-46f4-b01b-83fbb61e387a.png" width="700"><br>
-<iframe src="https://drive.google.com/file/d/11FkrDR0xWSMMpuPAcfMLFNT27ECk76Id/view?usp=sharing"></iframe>
+<iframe href="https://drive.google.com/file/d/11FkrDR0xWSMMpuPAcfMLFNT27ECk76Id/view?usp=sharing"></iframe>
 
 
 
