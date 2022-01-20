@@ -14,10 +14,12 @@ _Visualtisatie gemaakt door de RV-studenten_<br>
 
 (5 dec)
 Tussentijdse showcase
+
 https://user-images.githubusercontent.com/80821099/150415198-c034bcf5-6d00-4b49-9abd-698ddeeb61cf.mp4
 
 
 (20 jan)
+
 https://user-images.githubusercontent.com/80821099/150415696-461e982f-8e3a-42ff-8afd-a23305660f0a.mp4
 
 
