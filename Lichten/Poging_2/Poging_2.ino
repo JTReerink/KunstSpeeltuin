@@ -10,7 +10,6 @@
 #define LED_PIN    D1
 #define SENSOR_PIN D2
 #define BUTTON_ONE 0
-#define BUTTON_TWO D8
 
 // How many NeoPixels are attached to the Arduino?
 #define LED_COUNT 60
@@ -51,7 +50,7 @@ void setup() {
 
 void loop(){
 
-  checkMoveSensor();
+//  checkMoveSensor();
   checkButton();
   
 }
@@ -70,61 +69,61 @@ void loop(){
 //    Stam = 35 - 37
 //    Bloem = 38 - 43
 
-
-// MOVE SENSOR //
-void checkMoveSensor(){
-  bool newState = digitalRead(SENSOR_PIN);
-  
-  if(newState == HIGH && oldState == LOW) {
-    fadeInAll(25, 34, 50,25,0, 100);
-    
-  }
-  if(newState == LOW && oldState == HIGH) {
-    fadeOutAll(25, 34, 50,25,0, 100);
-
-  }
-  
-  oldState = newState;
-}
+//
+//// MOVE SENSOR //
+//void checkMoveSensor(){
+//  bool newState = digitalRead(SENSOR_PIN);
+//  
+//  if(newState == HIGH && oldState == LOW) {
+//    fadeInAll(25, 34, 50,25,0, 100);
+//    
+//  }
+//  if(newState == LOW && oldState == HIGH) {
+//    fadeOutAll(25, 34, 50,25,0, 100);
+//
+//  }
+//  
+//  oldState = newState;
+//}
 
 // BUTTON //
 void checkButton(){
   bool buttonDown = digitalRead(BUTTON_ONE);
 
   if(buttonDown == LOW) {
-    fadeWalk(0, 5, 0, 255, 230, 250); // heel bloem 0
+    void fadeWalk(0, 5, 0, 255, 230, 250); // heel bloem 0
     //elay(5000);
     walkIn(6, 9, 0, 255, 0, 700); // steeltje bloem 1
    // delay(5000);
     fadeWalk(10, 15, 200, 0, 221, 150); // bloem 1
 
     walkBack(6, 9, 0, 0, 0, 300); // steeltje bloem 1 uit
-  }
-  
-  
-  bool buttonDown2 = digitalRead(BUTTON_TWO);
-
-  if(buttonDown2 == HIGH) {
-    strip.setPixelColor(12, strip.Color(255, 0, 221));         
-    
-    strip.setPixelColor(13, strip.Color(255,190,0));         
-    
-    strip.setPixelColor(14, strip.Color(50,0,255));
-
-    strip.setPixelColor(15, strip.Color(0, 255, 230));
-
-    strip.setPixelColor(16, strip.Color(255,200,221));
-    
-    strip.setPixelColor(17, strip.Color(254,218,95));
-
-    strip.setPixelColor(18, strip.Color(159,160,253));
-
-    strip.setPixelColor(19, strip.Color(72,202,228));
-
-    strip.setPixelColor(22, strip.Color(75,0,255));
-    strip.show();
-  }
 }
+  
+  
+//  bool buttonDown2 = digitalRead(BUTTON_TWO);
+//
+//  if(buttonDown2 == HIGH) {
+//    strip.setPixelColor(12, strip.Color(255, 0, 221));         
+//    
+//    strip.setPixelColor(13, strip.Color(255,190,0));         
+//    
+//    strip.setPixelColor(14, strip.Color(50,0,255));
+//
+//    strip.setPixelColor(15, strip.Color(0, 255, 230));
+//
+//    strip.setPixelColor(16, strip.Color(255,200,221));
+//    
+//    strip.setPixelColor(17, strip.Color(254,218,95));
+//
+//    strip.setPixelColor(18, strip.Color(159,160,253));
+//
+//    strip.setPixelColor(19, strip.Color(72,202,228));
+//
+//    strip.setPixelColor(22, strip.Color(75,0,255));
+//    strip.show();
+//  }
+//}
 
 void bloem0 (0, 5,int r,int g,int b,int wait)
 
@@ -175,7 +174,7 @@ void fadeOutAll (int eersteLED,int laatsteLED, int r,int g,int b, int wait) {
 }
 
 // om en om infaden terwijl voorgaande nog bezig is
-void fadeWalk (int eersteLED,int laatsteLED, int r,int g,int b, int wait) {
+void fadeWalk(int eersteLED,int laatsteLED, int r,int g,int b, int wait) {
   for(int i=eersteLED; i<laatsteLED+11; i++) { // For each pixel in strip...
     if(i < laatsteLED+1){
       strip.setPixelColor(i, strip.Color((r/100.00*10),(g/100.00*10),(b/100.00*10)));
