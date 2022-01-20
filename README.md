@@ -19,3 +19,4 @@ _(gebruik [ctrl]+[click] om de pagina's in een andere tab te openen.)_
 * [Logboek Technische progressie](https://docs.google.com/spreadsheets/d/1YVb_C5TsbWpyhvSk7ew6KAUmTUdejODWfEtyPysFfY8/edit?usp=sharing)
 * [Trello (FrienlyElf)](https://trello.com/b/AEZ9vci9/friendlyelf)
 * [Bronnenlijst](https://docs.google.com/spreadsheets/d/1-HoiyHXPtEMzYmzG-buc7pj38aPBapJlqAEC7vKCPdE/edit?usp=sharing)
+* [Samenvatting Onderzoek](https://docs.google.com/document/d/1t0dX8lDHF7_yPjQtkMxefIpp7BCUEcAsflD2cDM8g2A/edit?usp=sharing)
