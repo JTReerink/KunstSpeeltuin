@@ -27,6 +27,7 @@ https://user-images.githubusercontent.com/80821099/150415696-461e982f-8e3a-42ff-
 
 ## Links
 _(gebruik [ctrl]+[click] om de pagina's in een andere tab te openen.)_
+* [Project omschrijving](https://drive.google.com/file/d/1ujRRsRmCqauLjLIrKxRTH-YpAxCWCUCm/view?usp=sharing)
 * [Logboek Werkwijze](https://docs.google.com/spreadsheets/d/1Q4qILZ0Bl56O2A2_YKM4ofYVsEkzzLspotR28CTKoQc/edit?usp=sharing)
 * [Logboek Technische progressie](https://docs.google.com/spreadsheets/d/1YVb_C5TsbWpyhvSk7ew6KAUmTUdejODWfEtyPysFfY8/edit?usp=sharing)
 * [Trello (FrienlyElf)](https://trello.com/b/AEZ9vci9/friendlyelf)
