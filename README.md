@@ -33,3 +33,5 @@ _(gebruik [ctrl]+[click] om de pagina's in een andere tab te openen.)_
 * [Trello (FrienlyElf)](https://trello.com/b/AEZ9vci9/friendlyelf)
 * [Bronnenlijst](https://docs.google.com/spreadsheets/d/1-HoiyHXPtEMzYmzG-buc7pj38aPBapJlqAEC7vKCPdE/edit?usp=sharing)
 * [Samenvatting Onderzoek](https://docs.google.com/document/d/1t0dX8lDHF7_yPjQtkMxefIpp7BCUEcAsflD2cDM8g2A/edit?usp=sharing)
+* [Website voor 'Thigmo Garden' ontworpen door Teun](https://xd.adobe.com/view/86df9a0e-b78a-4665-be0c-a81226085961-d38c/grid)
+* [Website voor 'Thigmo Garden' zo ver ik hem heb kunnen programmeren](madebyjaap.nl/thigmogarden)
