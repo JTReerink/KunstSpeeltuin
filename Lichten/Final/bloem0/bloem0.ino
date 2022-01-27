@@ -1,8 +1,3 @@
-/*
- * Duurzaam Huis Led Control
- * Temperature + Humidity Sensor DHT11
- * MediaCollege Amsterdam feb 2021
-*/
 
 // network
 #include <ESP8266WiFi.h>
@@ -19,28 +14,28 @@
 */
 #include "network.h" 
 
-#include "pushButtons.h"
+//#include "pushButtons.h"
 
 
 // Slow it down
-const int wait = 1000;  // msec between data requests
+const int wait = 500;  // msec between data requests
 
 
 void setup () {
   Serial.begin(115200); // start Serial monitor
   startNeoPixel(); // NeoPixel start
-  pinMode(BUTTON_ONE, INPUT_PULLUP);
-  pinMode(BUTTON_TWO, INPUT_PULLUP);
-  pinMode(BUTTON_THREE, INPUT_PULLUP);
-  pinMode(BUTTON_FOUR, INPUT_PULLUP);
+//  pinMode(BUTTON_ONE, INPUT_PULLUP);
+//  pinMode(BUTTON_TWO, INPUT_PULLUP);
+//  pinMode(BUTTON_THREE, INPUT_PULLUP);
+//  pinMode(BUTTON_FOUR, INPUT_PULLUP);
 }
  
 void loop() {  
   if (WiFi.status() != WL_CONNECTED) wifiConnect();// reconnect Wifi if necessary 
   if (WiFi.status() == WL_CONNECTED) { //Check WiFi connection status
 
-     checkButtons();
-     httpRequest2(); // write data to server
+//     checkButtons();
+//     httpRequest2(); // write data to server
      httpRequest(); // get data from server
      extractJson(); // execute data from server
   }
@@ -65,7 +60,7 @@ void httpRequest(){
   }
 
 
-
+/*
 void httpRequest2(){
   
   //https://arduinojson.org/v6/api/jsonarray/
@@ -86,6 +81,7 @@ void httpRequest2(){
   http.begin(url);                                      //Specify request destination
   int httpCode = http.GET();                            //Send the request  
   }
+*/
 
 void extractJson() {                //extract JSON string from HTTP data
   //Serial.println(httpResponse);
@@ -126,26 +122,26 @@ void parseCommands(JsonArray dataObj){
  }
 
 void plan1() {
-  Serial.print("plan 1 uitvoeren");
+  delay(4500);
   fadeWalk(0, 5, 0, 255, 221, 250);
-
+  delay(8000);
   fadeOutAll (0, 5, 0, 255, 221, 250);
 }
 void plan2() {
-  Serial.print("plan 2 uitvoeren");
+  delay(4500);
   fadeWalk(0, 5, 190, 255, 0, 250);
-
+  delay(8000);
   fadeOutAll (0, 5, 190, 255, 0, 250);
 }
 void plan3() {
-  Serial.print("plan 2 uitvoeren");
+  delay(4500);
   fadeWalk(0, 5, 0, 75, 255, 250);
-
+  delay(8000);
   fadeOutAll (0, 5, 0, 75, 255, 250);
 }
 void plan4() {
-  Serial.print("plan 2 uitvoeren");
+  delay(4500);
   fadeWalk(0, 5, 255, 0, 230, 250);
-
+  delay(8000);
   fadeOutAll (0, 5, 255, 0, 230, 250);
 }

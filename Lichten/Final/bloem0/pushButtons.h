@@ -1,13 +1,3 @@
-#define BUTTON_ONE 0
-#define BUTTON_TWO D5
-#define BUTTON_THREE D6
-#define BUTTON_FOUR D0
-
-float button1 = 0;
-float button2 = 0;
-float button3 = 0;
-float button4 = 0;
-
 float bloem0 = 0;
 float bloem1 = 0;
 float bloem2 = 0;

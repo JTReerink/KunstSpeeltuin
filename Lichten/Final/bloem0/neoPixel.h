@@ -9,7 +9,7 @@
 //#define NeoPIN D4 // Neopixel data pin
 #define NeoPIN D1 // Neopixel data pin Jaap
 #define NUM_LEDS 30 // number of leds
-int brightness = 150;
+int brightness = 255;
 
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUM_LEDS, NeoPIN, NEO_RGB + NEO_KHZ800);
 

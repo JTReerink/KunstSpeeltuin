@@ -1,9 +1,3 @@
-/*
- * Duurzaam Huis Led Control
- * Temperature + Humidity Sensor DHT11
- * MediaCollege Amsterdam feb 2021
-*/
-
 // network
 #include <ESP8266WiFi.h>
 #include <ESP8266HTTPClient.h>
@@ -19,17 +13,18 @@
 */
 #include "network.h" 
 
-//#include "pushButtons.h"
+#include "pushButtons.h"
 
 
 // Slow it down
-const int wait = 1000;  // msec between data requests
+const int wait = 500;  // msec between data requests
 
 
 void setup () {
   Serial.begin(115200); // start Serial monitor
   startNeoPixel(); // NeoPixel start
-//  pinMode(BUTTON_ONE, INPUT_PULLUP);
+  pinMode(BUTTON_ONE, INPUT_PULLUP);
+  pinMode(BUTTON_TWO, INPUT_PULLUP);
 //  pinMode(BUTTON_TWO, INPUT_PULLUP);
 //  pinMode(BUTTON_THREE, INPUT_PULLUP);
 //  pinMode(BUTTON_FOUR, INPUT_PULLUP);
@@ -39,10 +34,13 @@ void loop() {
   if (WiFi.status() != WL_CONNECTED) wifiConnect();// reconnect Wifi if necessary 
   if (WiFi.status() == WL_CONNECTED) { //Check WiFi connection status
 
-//     checkButtons();
-//     httpRequest2(); // write data to server
      httpRequest(); // get data from server
      extractJson(); // execute data from server
+     checkButtons();
+     if(bloem0 == 0 || bloem0 == 2) {
+     httpRequest2(); // write data to server
+     }
+     
   }
  
   //Serial.println(httpResponse);  //Print the response payload
@@ -65,7 +63,6 @@ void httpRequest(){
   }
 
 
-/* 
 void httpRequest2(){
   
   //https://arduinojson.org/v6/api/jsonarray/
@@ -86,7 +83,6 @@ void httpRequest2(){
   http.begin(url);                                      //Specify request destination
   int httpCode = http.GET();                            //Send the request  
   }
-*/
 
 
 void extractJson() {                //extract JSON string from HTTP data
@@ -101,19 +97,74 @@ void extractJson() {                //extract JSON string from HTTP data
   parseCommands(dataObj);
  } 
 
-
+float uitvoer = 0;
 
 void parseCommands(JsonArray dataObj){
+  if(dataObj[0] == 0) {
+    uitvoer = 0;
+    bloem0=0;
+    bloem1=0;
+    bloem2=0;
+    bloem3=0;
+    bloem4=0;
+  }
+  
+  if(dataObj[1] == 1){
+        uitvoer += 1;
+    if(uitvoer == 1) {
+      plan1();  
+    }
+    bloem0 = 1;
+    bloem1 = 1;
+  }
   if(dataObj[2] == 1){
-    plan1();
+        uitvoer += 1;
+    if(uitvoer == 1) {
+      plan2();  
+    }
+  }
+
+  if(dataObj[3] == 1){
+        uitvoer += 1;
+    if(uitvoer == 1) {
+      plan3();  
+    }
+    bloem0 = 3;
+    bloem3 = 1;
+  }
+
+  if(dataObj[4] == 1){
+        uitvoer += 1;
+    if(uitvoer == 1) {
+      plan4();  
+    }
+    bloem0 = 4;
+    bloem4 = 1;
   }
 }
 void plan1() {
+  delay(4500);
+  fadeWalk(4, 9, 0, 255, 221, 250);
+  delay(8000);
+  fadeOutAll (4, 9, 0, 255, 221, 250);
+}
+void plan2() {
   Serial.print("plan 1 uitvoeren");
-  delay(1500);
   walkIn(0, 3, 255, 0, 0, 700); // steeltje bloem 1
   fadeWalk(4, 9, 190, 255, 0, 250);
   walkBack(0, 3, 0, 0, 0, 300); // steeltje bloem 1 uit
-  delay(7000);
+  delay(6000);
   fadeOutAll (4, 9, 190, 255, 0, 250);
+}
+void plan3() {
+  delay(4500);
+  fadeWalk(4, 9, 0, 75, 255, 250);
+  delay(8000);
+  fadeOutAll (4, 9, 0, 75, 255, 250);
+}
+void plan4() {
+  delay(4500);
+  fadeWalk(4, 9, 255, 0, 230, 250);
+  delay(8000);
+  fadeOutAll (4, 9, 255, 0, 230, 250);
 }
