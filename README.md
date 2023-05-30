@@ -24,6 +24,12 @@ https://user-images.githubusercontent.com/80821099/150415696-461e982f-8e3a-42ff-
 
 
 
+https://github.com/JTReerink/KunstSpeeltuin/assets/80821099/60564447-89aa-4177-925c-d095db21fdc2
+
+
+
+https://github.com/JTReerink/KunstSpeeltuin/assets/80821099/8c00587b-2acd-4b19-8d6c-0c570d7ad8f9
+
 
 ## Links
 _(gebruik [ctrl]+[click] om de pagina's in een andere tab te openen.)_
